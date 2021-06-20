@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome screen should render the component without crashing 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    testID="WelcomeScreen"
+  >
+    <RCTImageView
+      internal_analyticTag={null}
+      resizeMode="stretch"
+      source={
+        Array [
+          Object {
+            "testUri": "../../../app/components/wallpaper/bg.png",
+          },
+        ]
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "height": null,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "resizeMode": "stretch",
+          "right": 0,
+          "top": 0,
+          "width": null,
+        }
+      }
+    />
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "flex": 1,
+              "height": "100%",
+            },
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+            },
+          ],
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "flex": 1,
+              "height": "100%",
+            },
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+            },
+            Object {
+              "paddingTop": 0,
+            },
+          ]
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Array [
+              Object {
+                "alignItems": "stretch",
+                "justifyContent": "flex-start",
+              },
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+                "paddingHorizontal": 16,
+              },
+            ]
+          }
+          keyboardShouldPersistTaps="handled"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#ffffff",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "backgroundColor": "rgba(0, 0, 0, 0)",
+              },
+            ]
+          }
+        >
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingTop": 24,
+                  },
+                  Object {
+                    "paddingBottom": 20,
+                    "paddingHorizontal": 0,
+                    "paddingTop": 12,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "width": 32,
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Helvetica",
+                        "fontSize": 15,
+                      },
+                      Array [
+                        Object {
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Helvetica",
+                          "fontSize": 12,
+                          "fontWeight": "bold",
+                          "letterSpacing": 1.5,
+                          "lineHeight": 15,
+                          "textAlign": "center",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  welcomeScreen.poweredBy.test
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": 32,
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 28,
+                      "fontWeight": "bold",
+                      "lineHeight": 38,
+                      "textAlign": "center",
+                    },
+                  ]
+                }
+              >
+                Your new app, 
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 26,
+                      "fontStyle": "italic",
+                      "fontWeight": "bold",
+                    },
+                  ]
+                }
+              >
+                almost
+              </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 28,
+                      "fontWeight": "bold",
+                      "lineHeight": 38,
+                      "textAlign": "center",
+                    },
+                  ]
+                }
+              >
+                !
+              </Text>
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 24,
+                    "fontWeight": "bold",
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 28,
+                    "fontWeight": "bold",
+                    "lineHeight": 38,
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              welcomeScreen.readyForLaunch.test
+            </Text>
+            <RCTImageView
+              internal_analyticTag={null}
+              resizeMode="cover"
+              source={
+                Array [
+                  Object {
+                    "testUri": "../../../app/screens/welcome/bowser.png",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": 230,
+                  "marginVertical": 24,
+                  "maxWidth": "100%",
+                  "overflow": "hidden",
+                  "width": 343,
+                }
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                  },
+                  Object {
+                    "color": "#BAB6C8",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                    "lineHeight": 22,
+                    "marginBottom": 24,
+                  },
+                ]
+              }
+            >
+              This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship.
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                  },
+                  Object {
+                    "color": "#BAB6C8",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                    "lineHeight": 22,
+                    "marginBottom": 24,
+                  },
+                ]
+              }
+            >
+              For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      style={
+        Object {
+          "backgroundColor": "#20162D",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#5D2555",
+              "borderRadius": 4,
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+          testID="next-screen-button"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#ffffff",
+                  "fontFamily": "Helvetica",
+                  "fontSize": 15,
+                },
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontSize": 9,
+                    "paddingHorizontal": 12,
+                  },
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 13,
+                    "fontWeight": "bold",
+                    "letterSpacing": 2,
+                  },
+                ],
+              ]
+            }
+          >
+            welcomeScreen.continue.test
+          </Text>
+        </View>
+      </View>
+    </RCTSafeAreaView>
+  </View>
+</RNCSafeAreaProvider>
+`;
