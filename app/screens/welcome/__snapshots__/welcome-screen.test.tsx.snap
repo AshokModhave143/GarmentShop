@@ -20,30 +20,6 @@ exports[`Welcome screen should render the component without crashing 1`] = `
     }
     testID="WelcomeScreen"
   >
-    <RCTImageView
-      internal_analyticTag={null}
-      resizeMode="stretch"
-      source={
-        Array [
-          Object {
-            "testUri": "../../../app/components/wallpaper/bg.png",
-          },
-        ]
-      }
-      style={
-        Object {
-          "bottom": 0,
-          "height": null,
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "resizeMode": "stretch",
-          "right": 0,
-          "top": 0,
-          "width": null,
-        }
-      }
-    />
     <View
       onLayout={[Function]}
       style={
@@ -109,76 +85,6 @@ exports[`Welcome screen should render the component without crashing 1`] = `
           }
         >
           <View>
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingTop": 24,
-                  },
-                  Object {
-                    "paddingBottom": 20,
-                    "paddingHorizontal": 0,
-                    "paddingTop": 12,
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "width": 32,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                    "justifyContent": "center",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Array [
-                      Object {
-                        "color": "#ffffff",
-                        "fontFamily": "Helvetica",
-                        "fontSize": 15,
-                      },
-                      Array [
-                        Object {
-                          "textAlign": "center",
-                        },
-                        Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Helvetica",
-                          "fontSize": 12,
-                          "fontWeight": "bold",
-                          "letterSpacing": 1.5,
-                          "lineHeight": 15,
-                          "textAlign": "center",
-                        },
-                      ],
-                    ]
-                  }
-                >
-                  welcomeScreen.poweredBy.test
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "width": 32,
-                  }
-                }
-              />
-            </View>
             <Text
               style={
                 Array [
@@ -264,49 +170,6 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Object {
                     "color": "#ffffff",
                     "fontFamily": "Helvetica",
-                    "fontSize": 24,
-                    "fontWeight": "bold",
-                  },
-                  Object {
-                    "color": "#ffffff",
-                    "fontFamily": "Helvetica",
-                    "fontSize": 28,
-                    "fontWeight": "bold",
-                    "lineHeight": 38,
-                    "textAlign": "center",
-                  },
-                ]
-              }
-            >
-              welcomeScreen.readyForLaunch.test
-            </Text>
-            <RCTImageView
-              internal_analyticTag={null}
-              resizeMode="cover"
-              source={
-                Array [
-                  Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "height": 230,
-                  "marginVertical": 24,
-                  "maxWidth": "100%",
-                  "overflow": "hidden",
-                  "width": 343,
-                }
-              }
-            />
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#ffffff",
-                    "fontFamily": "Helvetica",
                     "fontSize": 15,
                   },
                   Object {
@@ -320,26 +183,6 @@ exports[`Welcome screen should render the component without crashing 1`] = `
               }
             >
               This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship.
-            </Text>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#ffffff",
-                    "fontFamily": "Helvetica",
-                    "fontSize": 15,
-                  },
-                  Object {
-                    "color": "#BAB6C8",
-                    "fontFamily": "Helvetica",
-                    "fontSize": 15,
-                    "lineHeight": 22,
-                    "marginBottom": 24,
-                  },
-                ]
-              }
-            >
-              For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
             </Text>
           </View>
         </RCTScrollView>

@@ -1,6 +1,4 @@
 apply plugin: "com.android.application"
-// Unimodules: https://docs.expo.io/bare/installing-unimodules/#configuration-for-android
-apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 
 import com.android.build.OutputFile
 
@@ -134,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.helloworld"
+        applicationId "com.garmentshop"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -192,8 +190,6 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-
-    addUnimodulesDependencies()
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'

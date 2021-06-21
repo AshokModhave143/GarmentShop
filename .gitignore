@@ -73,3 +73,7 @@ web-build/
 # Configurations
 app/config/env.*.js
 !env.js
+
+# Jest
+./jest
+jest-coverage/

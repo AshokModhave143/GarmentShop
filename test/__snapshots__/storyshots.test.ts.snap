@@ -99,7 +99,7 @@ exports[`Storyshots AutoImage Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
+                    "testUri": "../../../app/components/built-in/auto-image/bowser.png",
                   },
                 ]
               }
@@ -117,7 +117,7 @@ exports[`Storyshots AutoImage Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
+                    "testUri": "../../../app/components/built-in/auto-image/bowser.png",
                   },
                 ]
               }
@@ -135,7 +135,7 @@ exports[`Storyshots AutoImage Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
+                    "testUri": "../../../app/components/built-in/auto-image/bowser.png",
                   },
                 ]
               }
@@ -153,7 +153,7 @@ exports[`Storyshots AutoImage Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
+                    "testUri": "../../../app/components/built-in/auto-image/bowser.png",
                   },
                 ]
               }
@@ -171,7 +171,7 @@ exports[`Storyshots AutoImage Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/screens/welcome/bowser.png",
+                    "testUri": "../../../app/components/built-in/auto-image/bowser.png",
                   },
                 ]
               }
@@ -3519,7 +3519,7 @@ exports[`Storyshots Header Behavior 1`] = `
                       source={
                         Array [
                           Object {
-                            "testUri": "../../../app/components/icon/icons/arrow-left.png",
+                            "testUri": "../../../app/components/built-in/icon/icons/arrow-left.png",
                           },
                         ]
                       }
@@ -3737,7 +3737,7 @@ exports[`Storyshots Header Behavior 1`] = `
                       source={
                         Array [
                           Object {
-                            "testUri": "../../../app/components/icon/icons/bullet.png",
+                            "testUri": "../../../app/components/built-in/icon/icons/bullet.png",
                           },
                         ]
                       }
@@ -3873,7 +3873,7 @@ exports[`Storyshots Icon Names 1`] = `
                 source={
                   Array [
                     Object {
-                      "testUri": "../../../app/components/icon/icons/arrow-left.png",
+                      "testUri": "../../../app/components/built-in/icon/icons/arrow-left.png",
                     },
                   ]
                 }
@@ -3974,7 +3974,7 @@ exports[`Storyshots Icon Names 1`] = `
                 source={
                   Array [
                     Object {
-                      "testUri": "../../../app/components/icon/icons/bullet.png",
+                      "testUri": "../../../app/components/built-in/icon/icons/bullet.png",
                     },
                   ]
                 }
@@ -6810,7 +6810,7 @@ exports[`Storyshots Wallpaper Style Presets 1`] = `
               source={
                 Array [
                   Object {
-                    "testUri": "../../../app/components/wallpaper/bg.png",
+                    "testUri": "../../../app/components/built-in/wallpaper/bg.png",
                   },
                 ]
               }
