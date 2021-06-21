@@ -15,7 +15,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { NavigationContainerRef } from '@react-navigation/native'
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
-import { initFonts } from './theme/fonts' // expo
+import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
 import {
   useBackButtonHandler,
@@ -51,7 +51,7 @@ function App() {
   // Kick off initial async loading actions, like loading fonts and RootStore
   useEffect(() => {
     ;(async () => {
-      await initFonts() // expo
+      await initFonts()
       setupRootStore().then(setRootStore)
     })()
   }, [])
