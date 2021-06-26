@@ -24,7 +24,6 @@ import {
   setRootNavigation,
   useNavigationPersistence,
 } from './navigators'
-import { RootStore, RootStoreProvider, setupRootStore } from './models'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
@@ -39,7 +38,6 @@ export const NAVIGATION_PERSISTENCE_KEY = 'NAVIGATION_STATE'
  */
 function App() {
   const navigationRef = useRef<NavigationContainerRef>(null)
-  const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined)
 
   setRootNavigation(navigationRef)
   useBackButtonHandler(navigationRef, canExit)
@@ -52,7 +50,6 @@ function App() {
   useEffect(() => {
     ;(async () => {
       await initFonts()
-      setupRootStore().then(setRootStore)
     })()
   }, [])
 
@@ -60,20 +57,18 @@ function App() {
   // In the meantime, don't render anything. This will be the background
   // color set in native by rootView's background color. You can replace
   // with your own loading component if you wish.
-  if (!rootStore) return null
+  // if (!rootStore) return null
 
   // otherwise, we're ready to render the app
   return (
     <ToggleStorybook>
-      <RootStoreProvider value={rootStore}>
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <RootNavigator
-            ref={navigationRef}
-            initialState={initialNavigationState}
-            onStateChange={onNavigationStateChange}
-          />
-        </SafeAreaProvider>
-      </RootStoreProvider>
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <RootNavigator
+          ref={navigationRef}
+          initialState={initialNavigationState}
+          onStateChange={onNavigationStateChange}
+        />
+      </SafeAreaProvider>
     </ToggleStorybook>
   )
 }

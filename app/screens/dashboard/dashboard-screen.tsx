@@ -1,12 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { observer } from 'mobx-react-lite'
 import { Header, Text, Screen } from '../../components'
 import { color } from '../../theme'
 import * as styles from './dashboard-screen.style'
 
-export const DashboardScreen = observer(function DashboardScreen() {
+export const DashboardScreen: React.FC = function DashboardScreen() {
   const navigation = useNavigation()
   const goBack = () => navigation.goBack()
 
@@ -25,4 +24,4 @@ export const DashboardScreen = observer(function DashboardScreen() {
       </Screen>
     </View>
   )
-})
+}

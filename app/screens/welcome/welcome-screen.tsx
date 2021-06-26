@@ -1,12 +1,11 @@
 import React from 'react'
 import { View, SafeAreaView } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { observer } from 'mobx-react-lite'
 import { Button, Screen, Text } from '../../components'
 import { color } from '../../theme'
 import * as styles from './welcome-screen.style'
 
-export const WelcomeScreen = observer(function WelcomeScreen() {
+export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
   const nextScreen = () => navigation.navigate('dashboard')
 
@@ -37,4 +36,4 @@ export const WelcomeScreen = observer(function WelcomeScreen() {
       </SafeAreaView>
     </View>
   )
-})
+}

@@ -1,9 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { onSnapshot } from 'mobx-state-tree'
-import { mst } from 'reactotron-mst'
 import { Platform } from 'react-native'
 import { Tron } from './tron'
-import { RootStore } from '../../models/root-store/root-store'
 import { ReactotronConfig, DEFAULT_REACTOTRON_CONFIG } from './reactotron-config'
 import { clear } from '../../utils/storage'
 import { RootNavigation } from '../../navigators'
@@ -85,24 +82,13 @@ export class Reactotron {
    */
   setRootStore(rootStore: any, initialData: any) {
     if (__DEV__) {
-      rootStore = rootStore as RootStore // typescript hack
-      this.rootStore = rootStore
-
-      const { initial, snapshots } = this.config.state
+      const { initial } = this.config.state
       const name = 'ROOT STORE'
 
       // logging features
       if (initial) {
         console.tron.display({ name, value: initialData, preview: 'Initial State' })
       }
-      // log state changes?
-      if (snapshots) {
-        onSnapshot(rootStore, (snapshot) => {
-          console.tron.display({ name, value: snapshot, preview: 'New State' })
-        })
-      }
-
-      console.tron.trackMstNode(rootStore)
     }
   }
 
@@ -128,30 +114,10 @@ export class Reactotron {
         })
       }
 
-      // ignore some chatty `mobx-state-tree` actions
-      const RX = /postProcessSnapshot|@APPLY_SNAPSHOT/
-
-      // hookup mobx-state-tree middleware
-      Tron.use(
-        mst({
-          filter: (event) => RX.test(event.name) === false,
-        }),
-      )
-
       // connect to the app
       Tron.connect()
 
       // Register Custom Commands
-      Tron.onCustomCommand({
-        title: 'Reset Root Store',
-        description: 'Resets the MST store',
-        command: 'resetStore',
-        handler: () => {
-          console.tron.log('resetting store')
-          clear()
-        },
-      })
-
       Tron.onCustomCommand({
         title: 'Reset Navigation State',
         description: 'Resets the navigation state',
