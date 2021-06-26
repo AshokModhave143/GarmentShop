@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { observer } from 'mobx-react-lite'
 import { Button, Screen, Text } from '../../components'
 import { color, spacing, typography } from '../../theme'
+import { useTranslation } from 'react-i18next'
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
@@ -59,6 +60,7 @@ const FOOTER_CONTENT: ViewStyle = {
 export const WelcomeScreen = observer(function WelcomeScreen() {
   const navigation = useNavigation()
   const nextScreen = () => navigation.navigate('dashboard')
+  const { t } = useTranslation()
 
   return (
     <View testID="WelcomeScreen" style={FULL}>

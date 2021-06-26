@@ -1,5 +1,5 @@
 const { exec } = require('child_process')
-const en = require('../app/i18n/en.json')
+const en = require('../app/i18n/locale/en.json')
 
 // Use this array for keys that for whatever reason aren't greppable so they
 // don't hold your test suite hostage by always failing.

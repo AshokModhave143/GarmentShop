@@ -1,11 +1,21 @@
-import i18n from 'i18n-js'
-import en from './en.json'
-import ja from './ja.json'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import { en, ja } from './locale'
 
-i18n.fallbacks = true
-i18n.translations = { en, ja }
+const resources = { en: { translation: en }, ja: { translation: ja} }
 
-i18n.locale = 'en' // TODO: add localization later
+i18n.use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en',
+    fallbackLng: 'en',
+    ns: ['translation'],
+    defaultNS: 'translation',
+    keySeparator: '.',
+    interpolation: {
+      escapeValue: false
+    }
+  })
 
 /**
  * Builds up valid keypaths for translations.
@@ -19,3 +29,5 @@ type RecursiveKeyOf<TObj extends Record<string, any>> = {
     ? `${TKey}` | `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
     : `${TKey}`
 }[keyof TObj & string]
+
+export default i18n

@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 import { getStorybookUI, configure } from '@storybook/react-native'
 import { initFonts } from '../app/theme/fonts'
-
-declare let module
+import { registerStories } from './storybook-registry'
 
 configure(() => {
-  require('./storybook-registry')
+  registerStories()
 }, module)
 
 const StorybookUI = getStorybookUI({

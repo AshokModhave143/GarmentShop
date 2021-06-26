@@ -1,4 +1,5 @@
-import i18n from 'i18n-js'
+import * as i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
 import { TxKeyPath } from './i18n'
 
 /**
@@ -6,6 +7,8 @@ import { TxKeyPath } from './i18n'
  *
  * @param key The i18n key.
  */
-export function translate(key: TxKeyPath, options?: i18n.TranslateOptions) {
-  return key ? i18n.t(key, options) : null
+
+export function translate(key: TxKeyPath, options?: i18next.TOptions) {
+  const { t } = useTranslation()
+  return key ? t(key, options) : null
 }
