@@ -10,5 +10,5 @@ import './__mocks__/mock-react-navigation'
 
 jest.useFakeTimers()
 declare global {
-    let __TEST__
+  let __TEST__
 }

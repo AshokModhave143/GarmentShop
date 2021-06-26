@@ -2,7 +2,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Platform } from 'react-native'
 import { Tron } from './tron'
 import { ReactotronConfig, DEFAULT_REACTOTRON_CONFIG } from './reactotron-config'
-import { clear } from '../../utils/storage'
 import { RootNavigation } from '../../navigators'
 
 // Teach TypeScript about the bad things we want to do.
@@ -64,7 +63,6 @@ export class Reactotron {
   constructor(config: ReactotronConfig = DEFAULT_REACTOTRON_CONFIG) {
     // merge the passed in config with some defaults
     this.config = {
-      host: 'localhost',
       useAsyncStorage: true,
       ...config,
       state: {
