@@ -1,4 +1,3 @@
-
 export const initFonts = async () => {
   // Refer to ./assets/fonts/custom-fonts.md for instructions.
   // ...
