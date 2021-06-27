@@ -11,12 +11,15 @@
  */
 import './i18n'
 import './utils/ignore-warnings'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavigationContainerRef } from '@react-navigation/native'
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
+import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
+import store from './reduxStore'
+
 import {
   useBackButtonHandler,
   RootNavigator,
@@ -63,11 +66,13 @@ function App() {
   return (
     <ToggleStorybook>
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <RootNavigator
-          ref={navigationRef}
-          initialState={initialNavigationState}
-          onStateChange={onNavigationStateChange}
-        />
+        <Provider store={store}>
+          <RootNavigator
+            ref={navigationRef}
+            initialState={initialNavigationState}
+            onStateChange={onNavigationStateChange}
+          />
+        </Provider>
       </SafeAreaProvider>
     </ToggleStorybook>
   )

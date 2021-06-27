@@ -1,5 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Platform } from 'react-native'
+import { reactotronRedux as reduxPlugin } from 'reactotron-redux'
+import Immutable from 'seamless-immutable'
+import sagaPlugin from 'reactotron-redux-saga'
 import { Tron } from './tron'
 import { ReactotronConfig, DEFAULT_REACTOTRON_CONFIG } from './reactotron-config'
 import { RootNavigation } from '../../navigators'
@@ -112,6 +115,12 @@ export class Reactotron {
         })
       }
 
+      // hook up redux plugin
+      Tron.use(reduxPlugin({ onRestore: Immutable }))
+
+      // hook saga plugin
+      Tron.use(sagaPlugin({}))
+
       // connect to the app
       Tron.connect()
 
@@ -143,3 +152,5 @@ export class Reactotron {
     }
   }
 }
+
+export { Tron }
