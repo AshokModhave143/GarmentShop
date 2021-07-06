@@ -3,18 +3,25 @@ import { initReactI18next } from 'react-i18next'
 import { en, ja } from './locale'
 
 const resources = { en: { translation: en }, ja: { translation: ja } }
+const i18nInstance = i18n.createInstance()
 
-i18n.use(initReactI18next).init({
-  resources,
-  lng: 'en',
-  fallbackLng: 'en',
-  ns: ['translation'],
-  defaultNS: 'translation',
-  keySeparator: '.',
-  interpolation: {
-    escapeValue: false,
-  },
-})
+i18nInstance
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en',
+    fallbackLng: 'en',
+    ns: ['translation'],
+    defaultNS: 'translation',
+    keySeparator: '.',
+    interpolation: {
+      escapeValue: false,
+    },
+  })
+  .then((result) => result)
+  .catch((err) => {
+    console.log('Error in creating instance for i18n', err)
+  })
 
 /**
  * Builds up valid keypaths for translations.
@@ -29,4 +36,4 @@ type RecursiveKeyOf<TObj extends Record<string, any>> = {
     : `${TKey}`
 }[keyof TObj & string]
 
-export default i18n
+export default i18nInstance

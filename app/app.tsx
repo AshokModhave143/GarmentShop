@@ -19,6 +19,8 @@ import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
 import store from './reduxStore'
+import { I18nextProvider } from 'react-i18next'
+import i18nInstance from './i18n/i18n'
 
 import {
   useBackButtonHandler,
@@ -67,11 +69,13 @@ function App() {
     <Provider store={store}>
       <ToggleStorybook>
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <RootNavigator
-            ref={navigationRef}
-            initialState={initialNavigationState}
-            onStateChange={onNavigationStateChange}
-          />
+          <I18nextProvider i18n={i18nInstance}>
+            <RootNavigator
+              ref={navigationRef}
+              initialState={initialNavigationState}
+              onStateChange={onNavigationStateChange}
+            />
+          </I18nextProvider>
         </SafeAreaProvider>
       </ToggleStorybook>
     </Provider>
