@@ -30,6 +30,7 @@ import {
   useNavigationPersistence,
 } from './navigators'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
+import RNBootSplash from 'react-native-bootsplash'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -53,6 +54,9 @@ function App() {
 
   // Kick off initial async loading actions, like loading fonts and RootStore
   useEffect(() => {
+    setTimeout(() => {
+      RNBootSplash.hide({ fade: true })
+    }, 3000)
     ;(async () => {
       await initFonts()
     })()
