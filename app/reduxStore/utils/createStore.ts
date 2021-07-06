@@ -4,7 +4,7 @@ import screenTracking from './screenTrackingMiddleware'
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
 
 // create store
-export default (rootReducer, rootSaga) => {
+export default (createRootReducer, rootSaga, preloadedState) => {
   /* -------------- Redux configuration -------------------- */
   const middleware = []
   const enhancers = []
@@ -21,10 +21,10 @@ export default (rootReducer, rootSaga) => {
   middleware.push(sagaMiddleware)
 
   /* ------------- Assemble middlewares ------------------ */
-  enhancers.push(applyMiddleware(...middleware))
+  // enhancers.push(applyMiddleware(...middleware))
   enhancers.push(
     createInjectorsEnhancer({
-      createReducer: rootReducer,
+      createReducer: createRootReducer,
       runSaga,
     }),
   )
@@ -36,14 +36,15 @@ export default (rootReducer, rootSaga) => {
   // }
 
   const store = createAppropriateStore({
-    reducer: rootReducer,
-    middleware: [...getDefaultMiddleware(), compose(...middleware)],
+    reducer: createRootReducer(),
+    preloadedState,
+    middleware: [...getDefaultMiddleware({ thunk: false }), ...middleware],
     devTools: true,
     enhancers,
   })
 
   // kick off root saga
-  const sagaManager = sagaMiddleware.run(rootSaga)
+  sagaMiddleware.run(rootSaga)
 
   // make reducers hot reloadable
   if (module.hot) {
@@ -54,7 +55,6 @@ export default (rootReducer, rootSaga) => {
 
   return {
     store,
-    sagaManager,
     sagaMiddleware,
   }
 }

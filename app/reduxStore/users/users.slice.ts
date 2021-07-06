@@ -9,7 +9,7 @@ export type userState = {
   hasError: boolean
   users: User[]
 }
-const initialState: userState = {
+export const initialState: userState = {
   hasError: false,
   users: [],
 }
@@ -21,8 +21,9 @@ const userSlice = createSlice({
     addUser: (state, action: PayloadAction<User>) => {
       state.users.unshift(action.payload)
     },
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    getUsers: () => {},
+    getUsers: (state) => {
+      state.hasError = false
+    },
     getUsersSuccess: (state, action: PayloadAction<User[]>): any => {
       state.users = action.payload
     },

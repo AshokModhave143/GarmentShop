@@ -1,13 +1,16 @@
-import { combineReducers } from '@reduxjs/toolkit'
+// import { combineReducers } from '@reduxjs/toolkit'
 import userSlice from './users/users.slice'
 
-export default (injectedReducers = {}) => {
+const reducers = {
+  users: userSlice,
+}
+export default function createRootReducer(injectedReducers = {}) {
   // const rootReducer = combineReducers({
-  //   users: userSlice,
+  //   ...reducers,
   //   ...injectedReducers,
   // })
   const rootReducer = {
-    users: userSlice,
+    ...reducers,
     ...injectedReducers,
   }
   return rootReducer

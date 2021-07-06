@@ -64,17 +64,17 @@ function App() {
 
   // otherwise, we're ready to render the app
   return (
-    <ToggleStorybook>
-      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <Provider store={store}>
+    <Provider store={store}>
+      <ToggleStorybook>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <RootNavigator
             ref={navigationRef}
             initialState={initialNavigationState}
             onStateChange={onNavigationStateChange}
           />
-        </Provider>
-      </SafeAreaProvider>
-    </ToggleStorybook>
+        </SafeAreaProvider>
+      </ToggleStorybook>
+    </Provider>
   )
 }
 

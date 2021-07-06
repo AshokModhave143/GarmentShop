@@ -1,14 +1,9 @@
-import { all, fork } from 'redux-saga/effects'
-
-import { watchRequestGetUsersAsync } from './users/users.saga'
-
-// Types
+import { all } from 'redux-saga/effects'
 
 // Sagas
-
-// Api
+import { watchRequestGetUsersAsync } from './users/users.saga'
 
 // Connect types to sagas
 export default function* rootSaga() {
-  yield fork(watchRequestGetUsersAsync)
+  yield all([watchRequestGetUsersAsync()])
 }

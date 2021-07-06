@@ -1,4 +1,4 @@
-import { put, select, call, takeEvery } from 'redux-saga/effects'
+import { put, takeLatest } from 'redux-saga/effects'
 import { getUsersSuccess, getUsersFailure, User, getUsers } from './users.slice'
 
 export function* requestGetUsers() {
@@ -22,5 +22,5 @@ export function* requestGetUsers() {
 }
 
 export function* watchRequestGetUsersAsync() {
-  yield takeEvery(getUsers.type, requestGetUsers)
+  yield takeLatest(getUsers.type, requestGetUsers)
 }

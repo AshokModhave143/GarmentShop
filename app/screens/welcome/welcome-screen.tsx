@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react'
-import { View, SafeAreaView, Alert } from 'react-native'
+import React from 'react'
+import { View, SafeAreaView } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Button, Screen, Text } from '../../components'
 import { color } from '../../theme'
 import * as styles from './welcome-screen.style'
 import { useSelector } from 'react-redux'
-import store, { RootState } from '../../reduxStore'
+import { RootState, useAppDispatch } from '../../reduxStore'
 
 import { getUsers } from '../../reduxStore/users/users.slice'
 
 export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
+  const dispatch = useAppDispatch()
   const nextScreen = () => navigation.navigate('dashboard')
   const users = useSelector((state: RootState) => state.users)
 
-  const handleGetUsers = () => store.dispatch(getUsers)
+  const handleGetUsers = async () => await dispatch(getUsers())
 
   return (
     <View testID="WelcomeScreen" style={styles.FULL}>
@@ -35,7 +36,7 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
           // tx="welcomeScreen.shj"
           textStyle={styles.CONTINUE_TEXT}
           text="Get Users"
-          onPress={() => handleGetUsers()}
+          onPress={handleGetUsers}
         />
       </Screen>
       <SafeAreaView style={styles.FOOTER}>
