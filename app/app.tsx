@@ -11,12 +11,17 @@
  */
 import './i18n'
 import './utils/ignore-warnings'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NavigationContainerRef } from '@react-navigation/native'
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
+import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
+import store from './reduxStore'
+import { I18nextProvider } from 'react-i18next'
+import i18nInstance from './i18n/i18n'
+
 import {
   useBackButtonHandler,
   RootNavigator,
@@ -25,6 +30,7 @@ import {
   useNavigationPersistence,
 } from './navigators'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
+import RNBootSplash from 'react-native-bootsplash'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -48,6 +54,9 @@ function App() {
 
   // Kick off initial async loading actions, like loading fonts and RootStore
   useEffect(() => {
+    setTimeout(() => {
+      RNBootSplash.hide({ fade: true })
+    }, 3000)
     ;(async () => {
       await initFonts()
     })()
@@ -61,15 +70,19 @@ function App() {
 
   // otherwise, we're ready to render the app
   return (
-    <ToggleStorybook>
-      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <RootNavigator
-          ref={navigationRef}
-          initialState={initialNavigationState}
-          onStateChange={onNavigationStateChange}
-        />
-      </SafeAreaProvider>
-    </ToggleStorybook>
+    <Provider store={store}>
+      <ToggleStorybook>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <I18nextProvider i18n={i18nInstance}>
+            <RootNavigator
+              ref={navigationRef}
+              initialState={initialNavigationState}
+              onStateChange={onNavigationStateChange}
+            />
+          </I18nextProvider>
+        </SafeAreaProvider>
+      </ToggleStorybook>
+    </Provider>
   )
 }
 

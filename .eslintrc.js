@@ -65,7 +65,6 @@ module.exports = {
     'no-use-before-define': 'off',
     quotes: [2, 'single'],
     semi: [2, 'never'],
-    indent: [2, 2],
     'no-multi-spaces': [2],
     'react-native/no-raw-text': 0,
     'react/no-unescaped-entities': 0,
