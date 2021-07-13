@@ -6,7 +6,7 @@ module.exports = {
     '<rootDir>/test/setup.ts',
   ],
   setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
-  testPathIgnorePatterns: ['/node_modules/', '/e2e'],
+  testPathIgnorePatterns: ['/node_modules/', '/e2e', '/custom'],
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?react-native|@react-native|@react-navigation|@storybook|@react-native-community)',
   ],

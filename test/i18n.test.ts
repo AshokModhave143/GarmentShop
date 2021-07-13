@@ -7,7 +7,7 @@ const EXCEPTIONS = [
   // "welcomeScreen.readyForLaunch",
 ]
 
-function iterate (obj, stack, array) {
+function iterate(obj, stack, array) {
   for (const property in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, property)) {
       if (typeof obj[property] === 'object') {
@@ -45,7 +45,7 @@ describe('i18n', () => {
     // Actual command output:
     // grep "Tx=\"\S*\"\|tx=\"\S*\"\|translate(\"\S*\"" -ohr './app' | grep -o "\".*\""
     const command =
-            'grep "Tx=\\"\\S*\\"\\|tx=\\"\\S*\\"\\|translate(\\"\\S*\\"" -ohr \'./app\' | grep -o "\\".*\\""'
+      'grep "Tx=\\"\\S*\\"\\|tx=\\"\\S*\\"\\|translate(\\"\\S*\\"" -ohr \'./app\' | grep -o "\\".*\\""'
     exec(command, (_, stdout) => {
       const allTranslationsDefined = iterate(en, '', [])
       const allTranslationsUsed = stdout.replace(/"/g, '').split('\n')

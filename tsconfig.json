@@ -18,6 +18,14 @@
     "outDir": "./build",
     "types": ["node", "jest"]
   },
-  "exclude": ["node_modules"],
-  "include": ["index.js", "app", "test", "storybook", "babel.config.js", "jest.config.js"]
+  "exclude": ["node_modules", "custom"],
+  "include": [
+    "index.js",
+    "app",
+    "test",
+    "storybook",
+    "babel.config.js",
+    "jest.config.js",
+    "metro.config.js"
+  ]
 }

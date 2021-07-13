@@ -2,7 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import { en, ja } from './locale'
 
-const resources = { en: { translation: en }, ja: { translation: ja } }
+const resources = { en, ja }
 const i18nInstance = i18n.createInstance()
 
 i18nInstance
@@ -11,9 +11,11 @@ i18nInstance
     resources,
     lng: 'en',
     fallbackLng: 'en',
-    ns: ['translation'],
-    defaultNS: 'translation',
-    keySeparator: '.',
+    load: 'languageOnly',
+    defaultNS: 'common',
+    nsSeparator: '.',
+    returnObjects: true,
+    keySeparator: false,
     interpolation: {
       escapeValue: false,
     },
