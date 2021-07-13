@@ -4,10 +4,11 @@ import { configureStore } from '@reduxjs/toolkit'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { render as rtlRender } from '@testing-library/react-native'
 import { initialState } from '../app/reduxStore/initialState'
+import createReducer from '../app/reduxStore/rootReducer'
 
 const AllProviders = ({ children }) => {
   const store = configureStore({
-    reducer: null,
+    reducer: createReducer(),
     preloadedState: initialState,
   })
   return (
@@ -27,5 +28,6 @@ const customRender = (ui, options) => {
   return rtlRender(ui, { wrapper: AllProviders, ...options })
 }
 
+/** Library functions export */
 export * from '@testing-library/react-native'
 export { customRender as render }

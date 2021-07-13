@@ -172,6 +172,20 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                     "fontFamily": "Helvetica",
                     "fontSize": 15,
                   },
+                  undefined,
+                ]
+              }
+            >
+              {"hasError":false,"users":[]}
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#ffffff",
+                    "fontFamily": "Helvetica",
+                    "fontSize": 15,
+                  },
                   Object {
                     "color": "#BAB6C8",
                     "fontFamily": "Helvetica",
@@ -184,6 +198,57 @@ exports[`Welcome screen should render the component without crashing 1`] = `
             >
               This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship.
             </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FBA928",
+                  "borderRadius": 4,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "paddingHorizontal": 8,
+                  "paddingVertical": 8,
+                }
+              }
+              testID="next-screen-button"
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 15,
+                    },
+                    Array [
+                      Object {
+                        "color": "#ffffff",
+                        "fontSize": 9,
+                        "paddingHorizontal": 12,
+                      },
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Helvetica",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "letterSpacing": 2,
+                      },
+                    ],
+                  ]
+                }
+              >
+                welcomeScreen.continue
+              </Text>
+            </View>
           </View>
         </RCTScrollView>
       </View>

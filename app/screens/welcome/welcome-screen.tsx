@@ -33,7 +33,7 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
         </Text>
         <Button
           testID="next-screen-button"
-          // tx="welcomeScreen.shj"
+          tx="welcomeScreen.continue"
           textStyle={styles.CONTINUE_TEXT}
           text="Get Users"
           onPress={handleGetUsers}
