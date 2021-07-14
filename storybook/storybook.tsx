@@ -9,7 +9,7 @@ configure(() => {
 
 const StorybookUI = getStorybookUI({
   port: 9001,
-  host: 'localhost',
+  host: '192.168.1.64',
   onDeviceUI: true,
   asyncStorage: require('@react-native-async-storage/async-storage').default || null,
 })

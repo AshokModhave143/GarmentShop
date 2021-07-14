@@ -18,7 +18,7 @@ import { enableScreens } from 'react-native-screens'
 import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
-import store from './reduxStore'
+import store from './store'
 import { I18nextProvider } from 'react-i18next'
 import i18nInstance from './i18n/i18n'
 
