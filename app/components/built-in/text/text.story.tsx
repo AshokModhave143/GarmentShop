@@ -7,6 +7,7 @@ import { storiesOf } from '@storybook/react-native'
 import { StoryScreen, Story, UseCase } from '../../../../storybook/views'
 import { color } from '../../../theme'
 import { Text } from './text'
+import { text } from '@storybook/addon-knobs'
 
 declare let module
 
@@ -86,6 +87,7 @@ storiesOf('Text', module)
             {' '}
             Hello <Text preset="bold">bolded</Text> World.
           </Text>
+          <Text>{text('Custom Text', 'Hello there')}</Text>
         </View>
       </UseCase>
     </Story>
