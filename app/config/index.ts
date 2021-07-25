@@ -9,3 +9,4 @@ if (__DEV__) {
 // Export the config files as constants
 export { default as DebugConfig } from './DebugConfig'
 export { default as AppConfig } from './AppConfig'
+export { EnvConfig } from './EnvConfig'

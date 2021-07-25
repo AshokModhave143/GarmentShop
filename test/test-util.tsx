@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { render as rtlRender } from '@testing-library/react-native'
-import { initialState } from '../app/reduxStore/initialState'
-import createReducer from '../app/reduxStore/rootReducer'
+import { initialState } from '../app/store/initialState'
+import createReducer from '../app/store/rootReducer'
 
 const AllProviders = ({ children }) => {
   const store = configureStore({

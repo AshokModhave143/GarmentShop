@@ -5,9 +5,9 @@ import { Button, Screen, Text } from '../../components'
 import { color } from '../../theme'
 import * as styles from './welcome-screen.style'
 import { useSelector } from 'react-redux'
-import { RootState, useAppDispatch } from '../../reduxStore'
+import { RootState, useAppDispatch } from '../../store'
 
-import { getUsers } from '../../reduxStore/users/users.slice'
+import { getUsers } from '../../store/users/users.slice'
 
 export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
