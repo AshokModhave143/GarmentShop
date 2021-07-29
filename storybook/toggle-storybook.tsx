@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { DevSettings } from 'react-native'
-import { loadString, saveString } from '../app/utils/storage'
 import { EnvConfig } from '../app/config'
 
 /**
