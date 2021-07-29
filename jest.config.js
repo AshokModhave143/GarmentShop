@@ -2,7 +2,6 @@ module.exports = {
   roots: ['<rootDir>/app/'],
   preset: 'react-native',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'node'],
-  // testRegex: '/**/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
   transform: {
     '^.+\\.{ts, tsx}$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },

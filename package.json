@@ -12,7 +12,6 @@
     "ci:build:e2e": "detox build -c ios.sim.release",
     "compile": "tsc --noEmit -p . --pretty",
     "format": "npm-run-all format:*",
-    "format:js": "prettier --write \"app/**/*.js\"",
     "format:json": "prettier --write \"app/**/*.json\"",
     "format:md": "prettier --write \"**/*.md\"",
     "format:ts": "prettier --write \"app/**/*.ts{,x}\"",

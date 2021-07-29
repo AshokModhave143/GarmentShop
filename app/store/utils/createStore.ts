@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware, applyMiddleware, compose } from '@reduxjs/toolkit'
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 import screenTracking from './screenTrackingMiddleware'
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
@@ -21,7 +21,6 @@ export default (createRootReducer, rootSaga, preloadedState) => {
   middleware.push(sagaMiddleware)
 
   /* ------------- Assemble middlewares ------------------ */
-  // enhancers.push(applyMiddleware(...middleware))
   enhancers.push(
     createInjectorsEnhancer({
       createReducer: createRootReducer,

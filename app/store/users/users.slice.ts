@@ -27,6 +27,7 @@ const userSlice = createSlice({
     getUsersSuccess: (state, action: PayloadAction<User[]>): any => {
       state.users = action.payload
     },
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     getUsersFailure: (state, action: PayloadAction<any>) => {
       state.hasError = true
     },
