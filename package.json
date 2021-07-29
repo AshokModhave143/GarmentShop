@@ -30,7 +30,8 @@
     "clean": "react-native-clean-project",
     "clean-all": "npx react-native clean-project-auto",
     "generate": "node ./custom/tasks/buildTemplates/generate.js",
-    "clean:project": "rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && yarn && cd ios && pod update && cd .. && yarn start -- --reset-cache"
+    "clean:project": "rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && yarn && cd ios && pod update && cd .. && yarn start -- --reset-cache",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.14.1",
@@ -110,6 +111,7 @@
     "eslint-plugin-react-native": "^3.11.0",
     "fbjs-scripts": "3.0.0",
     "generate-template-files": "^3.0.0",
+    "husky": "^7.0.1",
     "jest": "^26.0.23",
     "jest-circus": "25.5.4",
     "jetifier": "1.6.6",
