@@ -27,6 +27,7 @@
     "storybook-web",
     "babel.config.js",
     "jest.config.js",
-    "metro.config.js"
+    "metro.config.js",
+    "Typings/*.d.ts"
   ]
 }

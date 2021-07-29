@@ -2,7 +2,8 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import { en, ja } from './locale'
 
-const resources = { en, ja }
+export const resources = { en, ja }
+export const defaultNS = 'common'
 const i18nInstance = i18n.createInstance()
 
 i18nInstance
@@ -12,7 +13,7 @@ i18nInstance
     lng: 'en',
     fallbackLng: 'en',
     load: 'languageOnly',
-    defaultNS: 'common',
+    defaultNS,
     nsSeparator: '.',
     returnObjects: true,
     keySeparator: false,
