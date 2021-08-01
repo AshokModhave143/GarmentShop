@@ -90,12 +90,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "textAlign": "center",
                   },
                 ]
@@ -106,12 +106,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 28,
                       "fontWeight": "bold",
                       "lineHeight": 38,
@@ -127,12 +127,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 26,
                       "fontStyle": "italic",
                       "fontWeight": "bold",
@@ -147,12 +147,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 28,
                       "fontWeight": "bold",
                       "lineHeight": 38,
@@ -169,7 +169,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   undefined,
@@ -183,12 +183,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   Object {
                     "color": "#BAB6C8",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                     "lineHeight": 22,
                     "marginBottom": 24,
@@ -226,7 +226,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Array [
@@ -237,7 +237,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                       },
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Helvetica",
+                        "fontFamily": "Roboto-Regular",
                         "fontSize": 13,
                         "fontWeight": "bold",
                         "letterSpacing": 2,
@@ -297,7 +297,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
               Array [
                 Object {
                   "color": "#ffffff",
-                  "fontFamily": "Helvetica",
+                  "fontFamily": "Roboto-Regular",
                   "fontSize": 15,
                 },
                 Array [
@@ -308,7 +308,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   },
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 13,
                     "fontWeight": "bold",
                     "letterSpacing": 2,
