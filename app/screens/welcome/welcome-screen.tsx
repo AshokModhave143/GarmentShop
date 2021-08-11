@@ -1,21 +1,30 @@
 import React from 'react'
-import { View, SafeAreaView } from 'react-native'
+import { View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Button, Screen, Text } from '../../components'
-import { color } from '../../theme'
 import * as styles from './welcome-screen.style'
 import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../store'
+import { Button as RNPButton } from 'react-native-paper'
+import { useTheme, color, ThemeContext, ThemeNames } from '../../theme'
 
 import { getUsers } from '../../store/users/users.slice'
+import { saveTheme } from '../../store/theme/theme.slice'
 
 export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
   const dispatch = useAppDispatch()
   const nextScreen = () => navigation.navigate('dashboard')
   const users = useSelector((state: RootState) => state.users)
+  const theme = useTheme()
+
+  const { toggleTheme, isThemeDark } = React.useContext(ThemeContext)
 
   const handleGetUsers = async () => await dispatch(getUsers())
+  const handleSwitchTheme = () => {
+    toggleTheme()
+    dispatch(saveTheme({ themeName: isThemeDark ? ThemeNames.DARK : ThemeNames.LIGHT }))
+  }
 
   return (
     <View testID="WelcomeScreen" style={styles.FULL}>
@@ -38,6 +47,25 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
           text="Get Users"
           onPress={handleGetUsers}
         />
+        <TouchableOpacity onPress={handleSwitchTheme}>
+          <RNPButton
+            theme={{
+              roundness: 4,
+              colors: {
+                primary: theme?.colors.surface,
+                background: theme.colors.background,
+              },
+            }}
+            icon="camera"
+            // eslint-disable-next-line react-native/no-inline-styles
+            style={{
+              backgroundColor: color.palette.orangeDarker,
+              marginTop: 20,
+            }}
+          >
+            Change Theme - RNP Button
+          </RNPButton>
+        </TouchableOpacity>
       </Screen>
       <SafeAreaView style={styles.FOOTER}>
         <View style={styles.FOOTER_CONTENT}>

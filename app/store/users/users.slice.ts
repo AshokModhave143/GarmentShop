@@ -5,11 +5,11 @@ export type User = {
   name: string
   salary: number
 }
-export type userState = {
+export type UserState = {
   hasError: boolean
   users: User[]
 }
-export const initialState: userState = {
+export const initialState: UserState = {
   hasError: false,
   users: [],
 }

@@ -18,6 +18,34 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A4B148D367B119F99EC2C2E5 /* libPods-GarmentShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EADEA568884090C1B008E181 /* libPods-GarmentShop.a */; };
 		E0E402AF856107EC82190244 /* libPods-GarmentShop-GarmentShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BE758935A381A571F5B21 /* libPods-GarmentShop-GarmentShopTests.a */; };
+		1FF6B18E4AC844F099B8317B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB89FBBEAF654A328A030405 /* Roboto-Black.ttf */; };
+		24635381893B40B1AF7B270F /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD93304D96F420F85F1415A /* Roboto-BlackItalic.ttf */; };
+		95B843E622B94A47A0956097 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 244D2962559E41358B64CEA0 /* Roboto-Bold.ttf */; };
+		7BFE3A2078C643308FA6AE34 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D390FAD453FD40E7AEE60158 /* Roboto-BoldItalic.ttf */; };
+		987A23D451274D98898F04C4 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE81C398514B59BAD7D259 /* Roboto-Italic.ttf */; };
+		C884CCEA287C4B6AA56C562A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65013911E0C144B8AAC07304 /* Roboto-Light.ttf */; };
+		AC069905CD0A42FBBA657B49 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CDC4E667D1347B6B6B1958A /* Roboto-LightItalic.ttf */; };
+		B675A6EC48EB4912A711F97B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF47113BC22F4D0A8A5AA899 /* Roboto-Medium.ttf */; };
+		528ECFF076444A219BFE2148 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F2654252944A2180C4526E /* Roboto-MediumItalic.ttf */; };
+		8B0DFF5C7DC74C91A5E16B91 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C07C2719BDA49BC847E8048 /* Roboto-Regular.ttf */; };
+		067F6D8EE71C441A9B8AF017 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27030D0D881F431BB7E14D09 /* Roboto-Thin.ttf */; };
+		D6420D50F1F8482999D32C9A /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 606A820BBCCE4283B96964F3 /* Roboto-ThinItalic.ttf */; };
+		92AF9571327548B4A5B6A501 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F7110DA07D4F3DB329456A /* AntDesign.ttf */; };
+		84B184B8D7254ED8BB1E49F0 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B48837351782424BA37CF6FF /* Entypo.ttf */; };
+		60F3EDA3E02448B7955CB562 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADF7B25E1A6F4357A76116A2 /* EvilIcons.ttf */; };
+		881C42CA76324B6E93391BF4 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3572DAE9CD843D487E4192F /* Feather.ttf */; };
+		76CABF1A0A734E86BDB3D2F1 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9681CDE556B4FC6B4A54CAE /* FontAwesome.ttf */; };
+		CC1ACE02C8424543B568A4E4 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A34A66C2E1437AA9558D0E /* FontAwesome5_Brands.ttf */; };
+		0D37EEA783CD4F80B8EA0600 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 348F95202DFD4BDB8E5CB9D8 /* FontAwesome5_Regular.ttf */; };
+		B945545826C741E9AB8D99E2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A07F7FA167744F1A82781A99 /* FontAwesome5_Solid.ttf */; };
+		3EB7818FE8B44CDEA304F2E3 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FBA40D6449447A59112ADE5 /* Fontisto.ttf */; };
+		8FF3F28CF78F4C2DB0CAFE51 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 755468B905CC4E6FAAACD806 /* Foundation.ttf */; };
+		A932CAC5CCB24F24A1E77E9A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A445C5CF9AD64C8E9258FF02 /* Ionicons.ttf */; };
+		6FC226B01DF946CF9322B204 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9048BD1C824669A11A818E /* MaterialCommunityIcons.ttf */; };
+		57FBCB6A2BA3498EAFE22B4F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88690632CCA2488B8328E0E3 /* MaterialIcons.ttf */; };
+		BAAF71D59CB74758AB1FC0DA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1FAC95F38CB489C95EFA9D1 /* Octicons.ttf */; };
+		A554EE581CD94467A0367300 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B793C465FEDD403F8BDE6CE8 /* SimpleLineIcons.ttf */; };
+		AFC391A89D9E4D53A6411E59 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B286DA3FAD4C42F1A68CF60E /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +87,34 @@
 		EADEA568884090C1B008E181 /* libPods-GarmentShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GarmentShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		CB89FBBEAF654A328A030405 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFD93304D96F420F85F1415A /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BlackItalic.ttf"; path = "../assets/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		244D2962559E41358B64CEA0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D390FAD453FD40E7AEE60158 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-BoldItalic.ttf"; path = "../assets/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0EEE81C398514B59BAD7D259 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; name = "Roboto-Italic.ttf"; path = "../assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		65013911E0C144B8AAC07304 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CDC4E667D1347B6B6B1958A /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-LightItalic.ttf"; path = "../assets/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF47113BC22F4D0A8A5AA899 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C3F2654252944A2180C4526E /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../assets/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C07C2719BDA49BC847E8048 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		27030D0D881F431BB7E14D09 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		606A820BBCCE4283B96964F3 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../assets/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		75F7110DA07D4F3DB329456A /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B48837351782424BA37CF6FF /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ADF7B25E1A6F4357A76116A2 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B3572DAE9CD843D487E4192F /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C9681CDE556B4FC6B4A54CAE /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		63A34A66C2E1437AA9558D0E /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		348F95202DFD4BDB8E5CB9D8 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A07F7FA167744F1A82781A99 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1FBA40D6449447A59112ADE5 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		755468B905CC4E6FAAACD806 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A445C5CF9AD64C8E9258FF02 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F9048BD1C824669A11A818E /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88690632CCA2488B8328E0E3 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F1FAC95F38CB489C95EFA9D1 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B793C465FEDD403F8BDE6CE8 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B286DA3FAD4C42F1A68CF60E /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +221,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				71ED362ACEA45F9F60DCD285 /* Pods */,
+				5273010F77104EAF8A1FE1D9 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -181,6 +238,42 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		5273010F77104EAF8A1FE1D9 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				CB89FBBEAF654A328A030405 /* Roboto-Black.ttf */,
+				AFD93304D96F420F85F1415A /* Roboto-BlackItalic.ttf */,
+				244D2962559E41358B64CEA0 /* Roboto-Bold.ttf */,
+				D390FAD453FD40E7AEE60158 /* Roboto-BoldItalic.ttf */,
+				0EEE81C398514B59BAD7D259 /* Roboto-Italic.ttf */,
+				65013911E0C144B8AAC07304 /* Roboto-Light.ttf */,
+				0CDC4E667D1347B6B6B1958A /* Roboto-LightItalic.ttf */,
+				AF47113BC22F4D0A8A5AA899 /* Roboto-Medium.ttf */,
+				C3F2654252944A2180C4526E /* Roboto-MediumItalic.ttf */,
+				9C07C2719BDA49BC847E8048 /* Roboto-Regular.ttf */,
+				27030D0D881F431BB7E14D09 /* Roboto-Thin.ttf */,
+				606A820BBCCE4283B96964F3 /* Roboto-ThinItalic.ttf */,
+				75F7110DA07D4F3DB329456A /* AntDesign.ttf */,
+				B48837351782424BA37CF6FF /* Entypo.ttf */,
+				ADF7B25E1A6F4357A76116A2 /* EvilIcons.ttf */,
+				B3572DAE9CD843D487E4192F /* Feather.ttf */,
+				C9681CDE556B4FC6B4A54CAE /* FontAwesome.ttf */,
+				63A34A66C2E1437AA9558D0E /* FontAwesome5_Brands.ttf */,
+				348F95202DFD4BDB8E5CB9D8 /* FontAwesome5_Regular.ttf */,
+				A07F7FA167744F1A82781A99 /* FontAwesome5_Solid.ttf */,
+				1FBA40D6449447A59112ADE5 /* Fontisto.ttf */,
+				755468B905CC4E6FAAACD806 /* Foundation.ttf */,
+				A445C5CF9AD64C8E9258FF02 /* Ionicons.ttf */,
+				3F9048BD1C824669A11A818E /* MaterialCommunityIcons.ttf */,
+				88690632CCA2488B8328E0E3 /* MaterialIcons.ttf */,
+				F1FAC95F38CB489C95EFA9D1 /* Octicons.ttf */,
+				B793C465FEDD403F8BDE6CE8 /* SimpleLineIcons.ttf */,
+				B286DA3FAD4C42F1A68CF60E /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -326,6 +419,34 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1FF6B18E4AC844F099B8317B /* Roboto-Black.ttf in Resources */,
+				24635381893B40B1AF7B270F /* Roboto-BlackItalic.ttf in Resources */,
+				95B843E622B94A47A0956097 /* Roboto-Bold.ttf in Resources */,
+				7BFE3A2078C643308FA6AE34 /* Roboto-BoldItalic.ttf in Resources */,
+				987A23D451274D98898F04C4 /* Roboto-Italic.ttf in Resources */,
+				C884CCEA287C4B6AA56C562A /* Roboto-Light.ttf in Resources */,
+				AC069905CD0A42FBBA657B49 /* Roboto-LightItalic.ttf in Resources */,
+				B675A6EC48EB4912A711F97B /* Roboto-Medium.ttf in Resources */,
+				528ECFF076444A219BFE2148 /* Roboto-MediumItalic.ttf in Resources */,
+				8B0DFF5C7DC74C91A5E16B91 /* Roboto-Regular.ttf in Resources */,
+				067F6D8EE71C441A9B8AF017 /* Roboto-Thin.ttf in Resources */,
+				D6420D50F1F8482999D32C9A /* Roboto-ThinItalic.ttf in Resources */,
+				92AF9571327548B4A5B6A501 /* AntDesign.ttf in Resources */,
+				84B184B8D7254ED8BB1E49F0 /* Entypo.ttf in Resources */,
+				60F3EDA3E02448B7955CB562 /* EvilIcons.ttf in Resources */,
+				881C42CA76324B6E93391BF4 /* Feather.ttf in Resources */,
+				76CABF1A0A734E86BDB3D2F1 /* FontAwesome.ttf in Resources */,
+				CC1ACE02C8424543B568A4E4 /* FontAwesome5_Brands.ttf in Resources */,
+				0D37EEA783CD4F80B8EA0600 /* FontAwesome5_Regular.ttf in Resources */,
+				B945545826C741E9AB8D99E2 /* FontAwesome5_Solid.ttf in Resources */,
+				3EB7818FE8B44CDEA304F2E3 /* Fontisto.ttf in Resources */,
+				8FF3F28CF78F4C2DB0CAFE51 /* Foundation.ttf in Resources */,
+				A932CAC5CCB24F24A1E77E9A /* Ionicons.ttf in Resources */,
+				6FC226B01DF946CF9322B204 /* MaterialCommunityIcons.ttf in Resources */,
+				57FBCB6A2BA3498EAFE22B4F /* MaterialIcons.ttf in Resources */,
+				BAAF71D59CB74758AB1FC0DA /* Octicons.ttf in Resources */,
+				A554EE581CD94467A0367300 /* SimpleLineIcons.ttf in Resources */,
+				AFC391A89D9E4D53A6411E59 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

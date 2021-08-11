@@ -160,7 +160,7 @@ exports[`Dashboard screen should render component without crashing 1`] = `
                     Array [
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Helvetica",
+                        "fontFamily": "Roboto-Regular",
                         "fontSize": 15,
                       },
                       Array [
@@ -194,7 +194,7 @@ exports[`Dashboard screen should render component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 24,
                     "fontWeight": "bold",
                   },
@@ -215,7 +215,7 @@ exports[`Dashboard screen should render component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 24,
                     "fontWeight": "bold",
                   },

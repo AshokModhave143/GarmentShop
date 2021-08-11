@@ -90,12 +90,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "textAlign": "center",
                   },
                 ]
@@ -106,12 +106,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 28,
                       "fontWeight": "bold",
                       "lineHeight": 38,
@@ -127,12 +127,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 26,
                       "fontStyle": "italic",
                       "fontWeight": "bold",
@@ -147,12 +147,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 28,
                       "fontWeight": "bold",
                       "lineHeight": 38,
@@ -169,7 +169,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   undefined,
@@ -183,12 +183,12 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 Array [
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                   },
                   Object {
                     "color": "#BAB6C8",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 15,
                     "lineHeight": 22,
                     "marginBottom": 24,
@@ -226,7 +226,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   Array [
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Helvetica",
+                      "fontFamily": "Roboto-Regular",
                       "fontSize": 15,
                     },
                     Array [
@@ -237,7 +237,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                       },
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Helvetica",
+                        "fontFamily": "Roboto-Regular",
                         "fontSize": 13,
                         "fontWeight": "bold",
                         "letterSpacing": 2,
@@ -249,6 +249,147 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 welcomeScreen.continue
               </Text>
             </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#EB9918",
+                    "borderColor": "transparent",
+                    "borderRadius": 4,
+                    "borderStyle": "solid",
+                    "borderWidth": 0,
+                    "elevation": 0,
+                    "marginTop": 20,
+                    "minWidth": 64,
+                  }
+                }
+              >
+                <View
+                  accessibilityRole="button"
+                  accessibilityState={
+                    Object {
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={false}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 4,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                        },
+                        undefined,
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "marginLeft": 12,
+                          "marginRight": -4,
+                        }
+                      }
+                    >
+                      <Text
+                        accessibilityElementsHidden={true}
+                        importantForAccessibility="no-hide-descendants"
+                        pointerEvents="none"
+                        selectable={false}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            Object {
+                              "color": "#ffffff",
+                              "fontSize": 16,
+                            },
+                          ]
+                        }
+                      >
+                        □
+                      </Text>
+                    </View>
+                    <Text
+                      numberOfLines={1}
+                      selectable={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#000000",
+                            "fontFamily": "System",
+                            "fontWeight": "400",
+                          },
+                          Object {
+                            "textAlign": "left",
+                          },
+                          Array [
+                            Object {
+                              "letterSpacing": 1,
+                              "marginHorizontal": 16,
+                              "marginVertical": 9,
+                              "textAlign": "center",
+                            },
+                            undefined,
+                            Object {
+                              "textTransform": "uppercase",
+                            },
+                            Object {
+                              "color": "#ffffff",
+                              "fontFamily": "System",
+                              "fontWeight": "500",
+                            },
+                            Object {
+                              "fontFamily": "System",
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ]
+                      }
+                    >
+                      Change Theme - RNP Button
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
           </View>
         </RCTScrollView>
       </View>
@@ -257,7 +398,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
       emulateUnlessSupported={true}
       style={
         Object {
-          "backgroundColor": "#20162D",
+          "backgroundColor": "#1C680D",
         }
       }
     >
@@ -297,7 +438,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
               Array [
                 Object {
                   "color": "#ffffff",
-                  "fontFamily": "Helvetica",
+                  "fontFamily": "Roboto-Regular",
                   "fontSize": 15,
                 },
                 Array [
@@ -308,7 +449,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   },
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Helvetica",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": 13,
                     "fontWeight": "bold",
                     "letterSpacing": 2,
