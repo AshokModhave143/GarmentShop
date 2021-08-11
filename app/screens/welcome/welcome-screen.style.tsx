@@ -46,7 +46,9 @@ export const CONTINUE_TEXT: TextStyle = {
   fontSize: 13,
   letterSpacing: 2,
 }
-export const FOOTER: ViewStyle = { backgroundColor: '#20162D' }
+export const FOOTER: ViewStyle = {
+  backgroundColor: color.palette.success[800],
+}
 export const FOOTER_CONTENT: ViewStyle = {
   paddingVertical: spacing[4],
   paddingHorizontal: spacing[4],

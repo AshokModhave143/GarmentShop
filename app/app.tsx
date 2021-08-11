@@ -21,6 +21,7 @@ import * as storage from './utils/storage'
 import store from './store'
 import { I18nextProvider } from 'react-i18next'
 import i18nInstance from './i18n/i18n'
+import { ThemeProvider, ThemeNames } from './theme'
 
 import {
   useBackButtonHandler,
@@ -71,17 +72,19 @@ function App() {
   // otherwise, we're ready to render the app
   return (
     <Provider store={store}>
-      <ToggleStorybook>
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <I18nextProvider i18n={i18nInstance}>
-            <RootNavigator
-              ref={navigationRef}
-              initialState={initialNavigationState}
-              onStateChange={onNavigationStateChange}
-            />
-          </I18nextProvider>
-        </SafeAreaProvider>
-      </ToggleStorybook>
+      <ThemeProvider themeName={ThemeNames.DARK}>
+        <ToggleStorybook>
+          <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+            <I18nextProvider i18n={i18nInstance}>
+              <RootNavigator
+                ref={navigationRef}
+                initialState={initialNavigationState}
+                onStateChange={onNavigationStateChange}
+              />
+            </I18nextProvider>
+          </SafeAreaProvider>
+        </ToggleStorybook>
+      </ThemeProvider>
     </Provider>
   )
 }

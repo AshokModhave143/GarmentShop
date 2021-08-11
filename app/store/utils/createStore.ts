@@ -2,6 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 import screenTracking from './screenTrackingMiddleware'
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
+import { getComposeWithDevTools } from './devTools/getComposeWithDevTools'
 
 // create store
 export default (createRootReducer, rootSaga, preloadedState) => {
@@ -27,6 +28,7 @@ export default (createRootReducer, rootSaga, preloadedState) => {
       runSaga,
     }),
   )
+  enhancers.push(getComposeWithDevTools())
 
   // if Reactotron is enabled (default is __DEV__), we'll create store through Reactotron
   const createAppropriateStore = configureStore

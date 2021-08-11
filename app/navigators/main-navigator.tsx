@@ -7,6 +7,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { WelcomeScreen, DashboardScreen } from '../screens'
+import { useTheme } from '../theme'
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -29,10 +30,11 @@ export type PrimaryParamList = {
 const Stack = createStackNavigator<PrimaryParamList>()
 
 export function MainNavigator() {
+  const { colors } = useTheme()
   return (
     <Stack.Navigator
       screenOptions={{
-        cardStyle: { backgroundColor: 'transparent' },
+        cardStyle: { backgroundColor: colors.background },
         headerShown: false,
       }}
     >

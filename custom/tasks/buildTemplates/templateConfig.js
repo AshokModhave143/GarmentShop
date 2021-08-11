@@ -66,7 +66,7 @@ function getTemplateConfig(callback) {
       },
       stringReplacers: [{ question: 'Enter redux-saga name (pascalCase):', slot: '__name__' }],
       output: {
-        path: appPath + '/reduxStore/__name__(kebabCase)',
+        path: appPath + '/store/__name__(kebabCase)',
         pathAndFileNameDefaultCase: CaseConverterEnum.KebabCase,
         overwrite: true,
       },

@@ -8,7 +8,7 @@ import React from 'react'
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { MainNavigator } from './main-navigator'
-import { color } from '../theme'
+import { useTheme } from '../theme'
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -27,10 +27,11 @@ export type RootParamList = {
 const Stack = createStackNavigator<RootParamList>()
 
 const RootStack = () => {
+  const { colors } = useTheme()
   return (
     <Stack.Navigator
       screenOptions={{
-        cardStyle: { backgroundColor: color.palette.deepPurple },
+        cardStyle: { backgroundColor: colors.background },
         headerShown: false,
       }}
     >
