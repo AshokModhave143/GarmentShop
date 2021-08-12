@@ -39,6 +39,7 @@
     "@react-navigation/stack": "5.12.8",
     "@reduxjs/toolkit": "^1.6.0",
     "apisauce": "2.0.0",
+    "file-loader": "^6.2.0",
     "i18next": "^20.3.2",
     "metro": "0.65",
     "react": "17.0.1",
@@ -61,6 +62,7 @@
     "redux-injectors": "^1.3.0",
     "redux-saga": "^1.1.3",
     "seamless-immutable": "^7.1.4",
+    "url-loader": "^4.1.1",
     "validate.js": "0.13.1"
   },
   "devDependencies": {
