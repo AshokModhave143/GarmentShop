@@ -23,7 +23,7 @@ const themeSlice = createSlice({
 })
 
 // selectors
-export const themeSelector = (state: RootState) => state.theme.themeName
+export const themeSelector = (state: RootState) => state.theme
 // Actions
 export const { saveTheme, getTheme } = themeSlice.actions
 

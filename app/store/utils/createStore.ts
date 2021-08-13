@@ -3,6 +3,10 @@ import createSagaMiddleware from 'redux-saga'
 import screenTracking from './screenTrackingMiddleware'
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
 import { getComposeWithDevTools } from './devTools/getComposeWithDevTools'
+import { persistStore, persistReducer } from 'reduxjs-toolkit-persist'
+import { createPersistanceConfig } from './persistance/create-persistance-config'
+import { createEncryptionTransform } from './encryption/create-encryption-transform'
+import { getEncryptionKey } from './encryption/get-encryption-key'
 
 // create store
 export default (createRootReducer, rootSaga, preloadedState) => {
@@ -36,13 +40,20 @@ export default (createRootReducer, rootSaga, preloadedState) => {
   //   enhancers.push(Tron.createEnhancer())
   // }
 
+  const encryptionKey = getEncryptionKey()
+  const encryptionTransform = createEncryptionTransform(encryptionKey.key)
+  const persistanceConfig = createPersistanceConfig(encryptionTransform)
+  const persistedReducers = persistReducer(persistanceConfig, createRootReducer())
+
   const store = createAppropriateStore({
-    reducer: createRootReducer(),
+    reducer: persistedReducers,
     preloadedState,
     middleware: [...getDefaultMiddleware({ thunk: false }), ...middleware],
     devTools: true,
     enhancers,
   })
+
+  const persistor = persistStore(store)
 
   // kick off root saga
   sagaMiddleware.run(rootSaga)
@@ -57,5 +68,6 @@ export default (createRootReducer, rootSaga, preloadedState) => {
   return {
     store,
     sagaMiddleware,
+    persistor,
   }
 }

@@ -1,4 +1,6 @@
+import { combineReducers } from '@reduxjs/toolkit'
 import userSlice from './users/users.slice'
+
 import themeSlice from './theme/theme.slice'
 
 const reducers = {
@@ -6,9 +8,9 @@ const reducers = {
   theme: themeSlice,
 }
 export default function createRootReducer(injectedReducers = {}) {
-  const rootReducer = {
+  const rootReducer = combineReducers({
     ...reducers,
     ...injectedReducers,
-  }
+  })
   return rootReducer
 }

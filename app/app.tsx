@@ -18,7 +18,7 @@ import { enableScreens } from 'react-native-screens'
 import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
-import store from './store'
+import store, { persistor } from './store'
 import { I18nextProvider } from 'react-i18next'
 import i18nInstance from './i18n/i18n'
 import { ThemeProvider, ThemeNames } from './theme'
@@ -32,6 +32,7 @@ import {
 } from './navigators'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
 import RNBootSplash from 'react-native-bootsplash'
+import { PersistGate } from 'reduxjs-toolkit-persist/integration/react'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -72,19 +73,21 @@ function App() {
   // otherwise, we're ready to render the app
   return (
     <Provider store={store}>
-      <ThemeProvider themeName={ThemeNames.DARK}>
-        <ToggleStorybook>
-          <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-            <I18nextProvider i18n={i18nInstance}>
-              <RootNavigator
-                ref={navigationRef}
-                initialState={initialNavigationState}
-                onStateChange={onNavigationStateChange}
-              />
-            </I18nextProvider>
-          </SafeAreaProvider>
-        </ToggleStorybook>
-      </ThemeProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider themeName={ThemeNames.DARK}>
+          <ToggleStorybook>
+            <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+              <I18nextProvider i18n={i18nInstance}>
+                <RootNavigator
+                  ref={navigationRef}
+                  initialState={initialNavigationState}
+                  onStateChange={onNavigationStateChange}
+                />
+              </I18nextProvider>
+            </SafeAreaProvider>
+          </ToggleStorybook>
+        </ThemeProvider>
+      </PersistGate>
     </Provider>
   )
 }

@@ -10,3 +10,4 @@ if (__DEV__) {
 export { default as DebugConfig } from './DebugConfig'
 export { default as AppConfig } from './AppConfig'
 export { EnvConfig } from './EnvConfig'
+export { CommonPersistConfig } from './CommonPersistConfig'
