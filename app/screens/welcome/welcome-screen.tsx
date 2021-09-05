@@ -15,7 +15,7 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
   const dispatch = useAppDispatch()
   const nextScreen = () => navigation.navigate('dashboard')
-  const users = useSelector((state: RootState) => state.users)
+  const users = useSelector((state: RootState) => state.users.users)
   const theme = useTheme()
 
   const { toggleTheme, isThemeDark } = React.useContext(ThemeContext)

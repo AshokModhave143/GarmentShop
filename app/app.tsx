@@ -30,8 +30,9 @@ import {
 } from './navigators'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
 import RNBootSplash from 'react-native-bootsplash'
-import { ReduxPersistProvider } from './redux-persist-provider'
-import { initialAppState } from './store'
+import configureAppStore, { initialAppState } from './store'
+import { ReduxPersistEncryptionGate } from './components/redux-persist-encryption-gate'
+import { getEncryptionKey } from './store/utils/encryption/get-encryption-key'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -63,6 +64,10 @@ function App() {
     })()
   }, [])
 
+  const handleEncryptionCb = (err?: Error) => {
+    console.log('Error:', err)
+  }
+
   // Before we show the app, we have to wait for our state to be ready.
   // In the meantime, don't render anything. This will be the background
   // color set in native by rootView's background color. You can replace
@@ -71,7 +76,12 @@ function App() {
 
   // otherwise, we're ready to render the app
   return (
-    <ReduxPersistProvider initialState={initialAppState}>
+    <ReduxPersistEncryptionGate
+      initialState={initialAppState}
+      configureStore={configureAppStore}
+      getEncryptionKey={getEncryptionKey}
+      encryptionErrorCb={handleEncryptionCb}
+    >
       <ThemeProvider themeName={ThemeNames.DARK}>
         <ToggleStorybook>
           <SafeAreaProvider initialMetrics={initialWindowMetrics}>
@@ -85,7 +95,7 @@ function App() {
           </SafeAreaProvider>
         </ToggleStorybook>
       </ThemeProvider>
-    </ReduxPersistProvider>
+    </ReduxPersistEncryptionGate>
   )
 }
 

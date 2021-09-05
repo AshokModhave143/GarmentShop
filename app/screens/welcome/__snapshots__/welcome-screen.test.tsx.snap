@@ -176,7 +176,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                 ]
               }
             >
-              {"hasError":false,"users":[]}
+              []
             </Text>
             <Text
               style={

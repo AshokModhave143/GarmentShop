@@ -5,8 +5,12 @@ import { initialState as initialAppState } from './initialState'
 import { persistStore } from 'reduxjs-toolkit-persist'
 import { Action, Dispatch } from '@reduxjs/toolkit'
 import { rootReducer } from './rootReducer'
+import { ConfigureStoreReturnType, ConfigureStoreType } from '../types'
 
-export const configureStore = ({ initialState = initialAppState, encryptionKey }) => {
+export const configureStore = ({
+  initialState = initialAppState,
+  encryptionKey,
+}: ConfigureStoreType): ConfigureStoreReturnType => {
   const store = configureAppStore({ initialState, encryptionKey })
   const persistor = persistStore(store)
 

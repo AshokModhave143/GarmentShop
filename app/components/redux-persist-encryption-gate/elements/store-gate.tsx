@@ -1,23 +1,19 @@
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState, useEffect } from 'react'
-import {
-  ConfigureStoreType,
-  EncryptionKeyType,
-  ConfigureStoreReturnType,
-  Obj,
-} from '../../../types'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { RootState } from '../../../store'
+import { ConfigureStoreType, EncryptionKeyType, ConfigureStoreReturnType } from '../../../types'
 
 export type StoreGateType = {
-  configureStore: ConfigureStoreType
+  configureStore: (props: ConfigureStoreType) => ConfigureStoreReturnType
   encryptionKey: EncryptionKeyType
-  encryptionErrorCb: () => void
-  initialState: Obj
+  encryptionErrorCb: (err: Error) => void
+  initialState: RootState
   children: (props: ConfigureStoreReturnType) => any
 }
 
 const storageKey = 'persist:root'
 
-export const StoreGate = ({
+export const StoreGate: React.FC<StoreGateType> = ({
   configureStore,
   encryptionErrorCb,
   encryptionKey,
@@ -39,7 +35,7 @@ export const StoreGate = ({
     AsyncStorage.clear()
 
     if (encryptionErrorCb) {
-      encryptionErrorCb()
+      encryptionErrorCb(new Error('Error in clearing asyn storage'))
     }
   }
 
