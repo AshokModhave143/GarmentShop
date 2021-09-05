@@ -15,10 +15,8 @@ import React, { useEffect, useRef } from 'react'
 import { NavigationContainerRef } from '@react-navigation/native'
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
-import { Provider } from 'react-redux'
 import { initFonts } from './theme/fonts'
 import * as storage from './utils/storage'
-import store from './store'
 import { I18nextProvider } from 'react-i18next'
 import i18nInstance from './i18n/i18n'
 import { ThemeProvider, ThemeNames } from './theme'
@@ -32,6 +30,9 @@ import {
 } from './navigators'
 import { ToggleStorybook } from '../storybook/toggle-storybook'
 import RNBootSplash from 'react-native-bootsplash'
+import configureAppStore, { initialAppState } from './store'
+import { ReduxPersistEncryptionGate } from './components/redux-persist-encryption-gate'
+import { getEncryptionKey } from './store/utils/encryption/get-encryption-key'
 
 // This puts screens in a native ViewController or Activity. If you want fully native
 // stack navigation, use `createNativeStackNavigator` in place of `createStackNavigator`:
@@ -63,6 +64,10 @@ function App() {
     })()
   }, [])
 
+  const handleEncryptionCb = (err?: Error) => {
+    console.log('Error:', err)
+  }
+
   // Before we show the app, we have to wait for our state to be ready.
   // In the meantime, don't render anything. This will be the background
   // color set in native by rootView's background color. You can replace
@@ -71,7 +76,12 @@ function App() {
 
   // otherwise, we're ready to render the app
   return (
-    <Provider store={store}>
+    <ReduxPersistEncryptionGate
+      initialState={initialAppState}
+      configureStore={configureAppStore}
+      getEncryptionKey={getEncryptionKey}
+      encryptionErrorCb={handleEncryptionCb}
+    >
       <ThemeProvider themeName={ThemeNames.DARK}>
         <ToggleStorybook>
           <SafeAreaProvider initialMetrics={initialWindowMetrics}>
@@ -85,7 +95,7 @@ function App() {
           </SafeAreaProvider>
         </ToggleStorybook>
       </ThemeProvider>
-    </Provider>
+    </ReduxPersistEncryptionGate>
   )
 }
 

@@ -3,9 +3,22 @@ import createSagaMiddleware from 'redux-saga'
 import screenTracking from './screenTrackingMiddleware'
 import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
 import { getComposeWithDevTools } from './devTools/getComposeWithDevTools'
+import {
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  REGISTER,
+  PURGE,
+} from 'reduxjs-toolkit-persist'
+import { createPersistanceConfig } from './persistance/create-persistance-config'
+import { createEncryptionTransform } from './encryption/create-encryption-transform'
+import createReducer from '../rootReducer'
+import rootSaga from '../rootSaga'
 
 // create store
-export default (createRootReducer, rootSaga, preloadedState) => {
+export default ({ initialState = {}, encryptionKey }) => {
   /* -------------- Redux configuration -------------------- */
   const middleware = []
   const enhancers = []
@@ -24,7 +37,7 @@ export default (createRootReducer, rootSaga, preloadedState) => {
   /* ------------- Assemble middlewares ------------------ */
   enhancers.push(
     createInjectorsEnhancer({
-      createReducer: createRootReducer,
+      createReducer: createReducer,
       runSaga,
     }),
   )
@@ -36,10 +49,21 @@ export default (createRootReducer, rootSaga, preloadedState) => {
   //   enhancers.push(Tron.createEnhancer())
   // }
 
+  const encryptionTransform = createEncryptionTransform(encryptionKey.key)
+  const persistanceConfig = createPersistanceConfig(encryptionTransform)
+  const persistedReducers = persistReducer(persistanceConfig, createReducer())
+
   const store = createAppropriateStore({
-    reducer: createRootReducer(),
-    preloadedState,
-    middleware: [...getDefaultMiddleware({ thunk: false }), ...middleware],
+    reducer: persistedReducers,
+    middleware: [
+      ...getDefaultMiddleware({
+        thunk: false,
+        serializableCheck: {
+          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        },
+      }),
+      ...middleware,
+    ],
     devTools: true,
     enhancers,
   })
@@ -54,8 +78,5 @@ export default (createRootReducer, rootSaga, preloadedState) => {
     })
   }
 
-  return {
-    store,
-    sagaMiddleware,
-  }
+  return store
 }

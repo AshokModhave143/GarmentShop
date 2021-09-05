@@ -1,13 +1,25 @@
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
-import createReducer from './rootReducer'
 import configureAppStore from './utils/createStore'
-import rootSaga from './rootSaga'
-import { initialState } from './initialState'
 
-const { store } = configureAppStore(createReducer, rootSaga, initialState)
+import { initialState as initialAppState } from './initialState'
+import { persistStore } from 'reduxjs-toolkit-persist'
+import { Action, Dispatch } from '@reduxjs/toolkit'
+import { rootReducer } from './rootReducer'
+import { ConfigureStoreReturnType, ConfigureStoreType } from '../types'
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export const configureStore = ({
+  initialState = initialAppState,
+  encryptionKey,
+}: ConfigureStoreType): ConfigureStoreReturnType => {
+  const store = configureAppStore({ initialState, encryptionKey })
+  const persistor = persistStore(store)
+
+  return { store, persistor }
+}
+
+export type RootState = ReturnType<typeof rootReducer>
+export type AppDispatch = Dispatch<Action>
 export const useAppDispatch = (): AppDispatch => useDispatch<AppDispatch>()
 export const useReduxSelector: TypedUseSelectorHook<RootState> = useSelector
-export default store
+export { initialAppState }
+export default configureStore
