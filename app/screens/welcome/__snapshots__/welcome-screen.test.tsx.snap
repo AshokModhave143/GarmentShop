@@ -246,7 +246,7 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   ]
                 }
               >
-                welcomeScreen.continue
+                welcomeScreen.fetchUsers
               </Text>
             </View>
             <View
@@ -389,6 +389,57 @@ exports[`Welcome screen should render the component without crashing 1`] = `
                   </View>
                 </View>
               </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FBA928",
+                  "borderRadius": 4,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "paddingHorizontal": 8,
+                  "paddingVertical": 8,
+                }
+              }
+              testID="logout-button"
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Roboto-Regular",
+                      "fontSize": 15,
+                    },
+                    Array [
+                      Object {
+                        "color": "#ffffff",
+                        "fontSize": 9,
+                        "paddingHorizontal": 12,
+                      },
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Roboto-Regular",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "letterSpacing": 2,
+                      },
+                    ],
+                  ]
+                }
+              >
+                welcomeScreen.logout
+              </Text>
             </View>
           </View>
         </RCTScrollView>

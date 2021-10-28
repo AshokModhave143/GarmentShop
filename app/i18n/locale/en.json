@@ -10,7 +10,9 @@
   "welcomeScreen": {
     "poweredBy": "POWERED BY Company",
     "readyForLaunch": "Ready for launch.",
-    "continue": "CONTINUE"
+    "fetchUsers": "Get Users",
+    "continue": "CONTINUE",
+    "logout": "LOGOUT"
   },
   "dashboardScreen": {
     "howTo": "DASHBOARD",

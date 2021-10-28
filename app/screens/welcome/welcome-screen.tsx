@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, SafeAreaView, TouchableOpacity, Alert } from 'react-native'
+import { View, SafeAreaView, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Button, Screen, Text } from '../../components'
 import * as styles from './welcome-screen.style'
@@ -10,6 +10,7 @@ import { useTheme, color, ThemeContext, ThemeNames } from '../../theme'
 
 import { getUsers } from '../../store/users/users.slice'
 import { saveTheme } from '../../store/theme/theme.slice'
+import { logout } from '../../store/auth/auth.slice'
 
 export const WelcomeScreen: React.FC = function WelcomeScreen() {
   const navigation = useNavigation()
@@ -42,9 +43,8 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
         </Text>
         <Button
           testID="next-screen-button"
-          tx="welcomeScreen.continue"
+          tx="welcomeScreen.fetchUsers"
           textStyle={styles.CONTINUE_TEXT}
-          text="Get Users"
           onPress={handleGetUsers}
         />
         <TouchableOpacity onPress={handleSwitchTheme}>
@@ -66,6 +66,12 @@ export const WelcomeScreen: React.FC = function WelcomeScreen() {
             Change Theme - RNP Button
           </RNPButton>
         </TouchableOpacity>
+        <Button
+          testID="logout-button"
+          tx="welcomeScreen.logout"
+          textStyle={styles.CONTINUE_TEXT}
+          onPress={() => dispatch(logout())}
+        />
       </Screen>
       <SafeAreaView style={styles.FOOTER}>
         <View style={styles.FOOTER_CONTENT}>

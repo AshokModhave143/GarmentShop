@@ -8,6 +8,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { WelcomeScreen, DashboardScreen } from '../screens'
 import { useTheme } from '../theme'
+import { Screens } from './screen-list'
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -33,13 +34,14 @@ export function MainNavigator() {
   const { colors } = useTheme()
   return (
     <Stack.Navigator
+      initialRouteName={Screens.welcome}
       screenOptions={{
         cardStyle: { backgroundColor: colors.background },
         headerShown: false,
       }}
     >
-      <Stack.Screen name="welcome" component={WelcomeScreen} />
-      <Stack.Screen name="dashboard" component={DashboardScreen} />
+      <Stack.Screen name={Screens.welcome} component={WelcomeScreen} />
+      <Stack.Screen name={Screens.dashboard} component={DashboardScreen} />
     </Stack.Navigator>
   )
 }

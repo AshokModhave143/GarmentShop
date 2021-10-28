@@ -82,7 +82,7 @@ function App() {
       getEncryptionKey={getEncryptionKey}
       encryptionErrorCb={handleEncryptionCb}
     >
-      <ThemeProvider themeName={ThemeNames.DARK}>
+      <ThemeProvider themeName={ThemeNames.LIGHT}>
         <ToggleStorybook>
           <SafeAreaProvider initialMetrics={initialWindowMetrics}>
             <I18nextProvider i18n={i18nInstance}>

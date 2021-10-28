@@ -1,4 +1,4 @@
-import { GeneralApiProblem } from './api-problem'
+import { GeneralApiProblem } from '../common/api-problem'
 
 export interface User {
   id: number

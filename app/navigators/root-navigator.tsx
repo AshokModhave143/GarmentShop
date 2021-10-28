@@ -9,6 +9,9 @@ import { NavigationContainer, NavigationContainerRef } from '@react-navigation/n
 import { createStackNavigator } from '@react-navigation/stack'
 import { MainNavigator } from './main-navigator'
 import { useTheme } from '../theme'
+import { AuthNavigator } from './auth/auth-navigator'
+import { useSelector } from 'react-redux'
+import { authSelector } from '../store/auth/auth.slice'
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -28,6 +31,10 @@ const Stack = createStackNavigator<RootParamList>()
 
 const RootStack = () => {
   const { colors } = useTheme()
+  const authState = useSelector(authSelector)
+  console.log(authState)
+  const component = authState.isLoggedIn ? MainNavigator : AuthNavigator
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -37,7 +44,7 @@ const RootStack = () => {
     >
       <Stack.Screen
         name="mainStack"
-        component={MainNavigator}
+        component={component}
         options={{
           headerShown: false,
         }}
