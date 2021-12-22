@@ -1,5 +1,5 @@
 import confgureAppStore, { initialAppState } from '../'
-import { login } from './Auth.slice'
+import { login } from './auth.slice'
 
 const setup = () => {
   const { store } = confgureAppStore({

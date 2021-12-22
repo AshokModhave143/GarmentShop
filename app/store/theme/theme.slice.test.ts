@@ -1,5 +1,5 @@
 import confgureAppStore, { initialAppState } from '../'
-import { getTheme } from './Theme.slice'
+import { getTheme } from './theme.slice'
 
 const setup = () => {
   const { store } = confgureAppStore({
