@@ -32,7 +32,8 @@
     "clean:project": "rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && yarn && cd ios && pod update && cd .. && yarn start -- --reset-cache",
     "prepare": "husky install",
     "semantic-release": "semantic-release --branches main",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "acp": "git add . && yarn commit && git push"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
