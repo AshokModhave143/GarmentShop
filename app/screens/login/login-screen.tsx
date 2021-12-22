@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
 import { View, Button } from 'react-native'
-import { useForm, Controller } from 'react-hook-form'
 import { TextInput } from 'react-native-paper'
 import { Text } from '../../components'
 import { useAppDispatch } from '../../store'
@@ -13,7 +13,8 @@ export type LoginProps = {
 export const LoginScreen: React.FC<LoginProps> = (props: LoginProps) => {
   const [val, setVal] = useState(null)
   const dispatch = useAppDispatch()
-  const { control } = useForm()
+  const { control, watch } = useForm()
+  const valuse = watch('username')
 
   return (
     <View style={styles.FULL}>
@@ -25,16 +26,12 @@ export const LoginScreen: React.FC<LoginProps> = (props: LoginProps) => {
         rules={{
           required: true,
         }}
-        render={({ field }) => (
+        render={({ field: { onChange } }) => (
           <TextInput
-            value={val}
-            onChange={(value: any) => {
-              console.log(value)
-              setVal(value)
-            }}
+            label="Username"
+            onChangeText={onChange}
             style={styles.TEXT_INPUT}
             placeholder="Enter username"
-            {...field}
           />
         )}
       />
@@ -45,7 +42,7 @@ export const LoginScreen: React.FC<LoginProps> = (props: LoginProps) => {
           dispatch(login({ username: 'ashok', password: '1111' }))
         }}
       />
-      <Text style={styles.OUTPUT}>{JSON.stringify(val)}</Text>
+      <Text style={styles.OUTPUT}>{valuse}</Text>
     </View>
   )
 }

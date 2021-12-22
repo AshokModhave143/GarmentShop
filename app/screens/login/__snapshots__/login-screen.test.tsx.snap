@@ -74,21 +74,103 @@ exports[`Login screen should render the component without crashing 1`] = `
               "paddingTop": 0,
             },
             Object {
-              "minHeight": 40,
+              "minHeight": 80,
             },
           ]
         }
       >
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "translateX": 0,
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            onLayout={[Function]}
+            style={
+              Object {
+                "color": "#6200ee",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+                "left": 0,
+                "opacity": 0,
+                "paddingLeft": 12,
+                "paddingRight": 12,
+                "position": "absolute",
+                "textAlign": "left",
+                "top": 40,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+                "writingDirection": "ltr",
+              }
+            }
+          >
+            Username
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+                "left": 0,
+                "opacity": 0,
+                "paddingLeft": 12,
+                "paddingRight": 12,
+                "position": "absolute",
+                "textAlign": "left",
+                "top": 40,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateY": 0,
+                  },
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+                "writingDirection": "ltr",
+              }
+            }
+          >
+            Username
+          </Text>
+        </View>
         <TextInput
           allowFontScaling={true}
           editable={true}
           multiline={false}
-          name="username"
           onBlur={[Function]}
-          onChange={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Enter username"
+          placeholder=""
           placeholderTextColor="rgba(0, 0, 0, 0.54)"
           rejectResponderTermination={true}
           selectionColor="#6200ee"
@@ -104,11 +186,11 @@ exports[`Login screen should render the component without crashing 1`] = `
                 "paddingRight": 12,
               },
               Object {
-                "height": 40,
+                "height": 80,
               },
               Object {
-                "paddingBottom": 0,
-                "paddingTop": 0,
+                "paddingBottom": 4,
+                "paddingTop": 24,
               },
               Object {
                 "color": "#000000",
@@ -125,7 +207,6 @@ exports[`Login screen should render the component without crashing 1`] = `
             ]
           }
           underlineColorAndroid="transparent"
-          value=""
         />
       </View>
     </View>
@@ -183,9 +264,7 @@ exports[`Login screen should render the component without crashing 1`] = `
           },
         ]
       }
-    >
-      null
-    </Text>
+    />
   </View>
 </RNCSafeAreaProvider>
 `;

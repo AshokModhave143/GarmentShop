@@ -14,6 +14,6 @@ export const styles = StyleSheet.create({
     marginHorizontal: spacing[2],
   },
   TEXT_INPUT: {
-    height: 40,
+    height: 80,
   },
 })
