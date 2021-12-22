@@ -19,13 +19,6 @@
         "semver": ">=1.7.0",
         "platform": "darwin"
       }
-    ],
-    "y": [
-      {
-        "rule": "cli",
-        "binary": "node",
-        "semver": "14.x"
-      }
     ]
   }
 }
