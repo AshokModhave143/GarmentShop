@@ -31,7 +31,8 @@
     "generate": "node ./custom/tasks/buildTemplates/generate.js",
     "clean:project": "rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && yarn && cd ios && pod update && cd .. && yarn start -- --reset-cache",
     "prepare": "husky install",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release --branches main",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
@@ -109,6 +110,7 @@
     "@typescript-eslint/parser": "^4.27.0",
     "babel-jest": "26.6.3",
     "babel-loader": "8.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "detox": "17.14.5",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
@@ -138,10 +140,10 @@
     "react-test-renderer": "^17.0.2",
     "reactotron-redux": "^3.1.3",
     "reactotron-redux-saga": "^4.2.3",
+    "semantic-release": "^18.0.1",
     "solidarity": "2.3.1",
     "ts-jest": "^27.0.3",
-    "typescript": "4.2.3",
-    "semantic-release": "^18.0.1"
+    "typescript": "4.2.3"
   },
   "detox": {
     "test-runner": "jest",
@@ -163,5 +165,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/AshokModhave143/GarmentShop.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
