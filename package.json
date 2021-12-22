@@ -1,6 +1,6 @@
 {
   "name": "garment-shop",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "start": "react-native start",
@@ -30,7 +30,8 @@
     "clean-all": "npx react-native clean-project-auto",
     "generate": "node ./custom/tasks/buildTemplates/generate.js",
     "clean:project": "rm -rf yarn.lock package-lock.json node_modules ios/Pods ios/Podfile.lock android/app/build && yarn && cd ios && pod update && cd .. && yarn start -- --reset-cache",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release --branches main"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
@@ -139,7 +140,8 @@
     "reactotron-redux-saga": "^4.2.3",
     "solidarity": "2.3.1",
     "ts-jest": "^27.0.3",
-    "typescript": "4.2.3"
+    "typescript": "4.2.3",
+    "semantic-release": "^18.0.1"
   },
   "detox": {
     "test-runner": "jest",
@@ -157,5 +159,9 @@
         "name": "iPhone 11"
       }
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshokModhave143/GarmentShop.git"
   }
 }
