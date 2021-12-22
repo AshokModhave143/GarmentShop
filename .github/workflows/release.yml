@@ -41,3 +41,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
