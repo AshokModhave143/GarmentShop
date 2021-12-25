@@ -18,7 +18,7 @@ export const LoginScreen: React.FC<LoginProps> = (props: LoginProps) => {
 
   return (
     <View style={styles.FULL}>
-      <Text style={styles.TEXT}>Hello</Text>
+      <Text style={styles.TEXT}>Login page</Text>
       <Controller
         name="username"
         control={control}
