@@ -1,0 +1,26 @@
+{
+  "common": {
+    "ok": "OK!",
+    "cancel": "Cancel",
+    "back": "Back"
+  },
+  "errors": {
+    "invalidEmail": "Invalid email address."
+  },
+  "welcomeScreen": {
+    "poweredBy": "POWERED BY Company",
+    "readyForLaunch": "Ready for launch.",
+    "fetchUsers": "Get Users",
+    "continue": "CONTINUE",
+    "logout": "LOGOUT"
+  },
+  "dashboardScreen": {
+    "howTo": "DASHBOARD",
+    "title": "Welcome to my dashboard!",
+    "tagLine": "Congratulations for making it possible"
+  },
+  "storybook": {
+    "placeholder": "Placeholder",
+    "field": "Field"
+  }
+}
