@@ -15,7 +15,5 @@ export const EncryptionGate = ({ getEncryptionKey, children }: EncryptionGateTyp
     })()
   }, [getEncryptionKey])
 
-  if (!encryptionKey.key) return null
-
-  return children(encryptionKey)
+  return encryptionKey.key ? children(encryptionKey) : null
 }

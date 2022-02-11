@@ -63,6 +63,7 @@ exports[`Login screen should render the component without crashing 1`] = `
                 "scaleY": 0.5,
               },
             ],
+            "zIndex": 1,
           }
         }
       />
@@ -94,6 +95,7 @@ exports[`Login screen should render the component without crashing 1`] = `
                   "translateX": 0,
                 },
               ],
+              "zIndex": 3,
             }
           }
         >
@@ -179,7 +181,6 @@ exports[`Login screen should render the component without crashing 1`] = `
               Object {
                 "flexGrow": 1,
                 "margin": 0,
-                "zIndex": 1,
               },
               Object {
                 "paddingLeft": 12,
