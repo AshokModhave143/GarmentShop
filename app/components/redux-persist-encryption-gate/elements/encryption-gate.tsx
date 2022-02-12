@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { EncryptionKeyType } from '../../../types'
 
 export type EncryptionGateType = {
@@ -15,7 +15,5 @@ export const EncryptionGate = ({ getEncryptionKey, children }: EncryptionGateTyp
     })()
   }, [getEncryptionKey])
 
-  if (!encryptionKey.key) return null
-
-  return children(encryptionKey)
+  return encryptionKey.key ? children(encryptionKey) : null
 }
