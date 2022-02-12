@@ -16,7 +16,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "outDir": "./build",
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "typeRoots": ["./Typings"]
   },
   "exclude": ["node_modules", "custom"],
   "include": [

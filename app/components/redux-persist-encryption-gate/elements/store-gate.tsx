@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import * as R from 'ramda'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { RootState } from '../../../store'
 import { ConfigureStoreType, EncryptionKeyType, ConfigureStoreReturnType } from '../../../types'
@@ -25,21 +26,19 @@ export const StoreGate: React.FC<StoreGateType> = ({
   useEffect(() => {
     ;(async () => {
       const data = await AsyncStorage.getItem(storageKey)
-      setHasData(data !== null)
+      setHasData(R.not(R.isEmpty(data)))
     })()
   }, [])
 
   if (hasData === false) return null
 
-  if (encryptionKey.isFresh && hasData !== null) {
-    AsyncStorage.clear()
-
-    if (encryptionErrorCb) {
-      encryptionErrorCb(new Error('Error in clearing asyn storage'))
-    }
+  if (encryptionKey.isFresh) {
+    AsyncStorage.clear().catch((err) => {
+      if (encryptionErrorCb) {
+        encryptionErrorCb(err)
+      }
+    })
   }
 
-  const { store, persistor } = configureStore({ initialState, encryptionKey })
-
-  return children({ store, persistor })
+  return children(configureStore({ initialState, encryptionKey }))
 }
