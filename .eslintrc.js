@@ -71,5 +71,9 @@ module.exports = {
     'react/prop-types': 'off',
     'space-before-function-paren': 0,
     'react/jsx-filename-extension': [0, { extensions: ['.js', '.jsx'] }],
+    'react-native/sort-styles': 0,
+    '@typescript-eslint/no-unused-vars': 0,
+    'react-native/no-color-literals': 0,
+    'react-native/no-inline-styles': 0,
   },
 }

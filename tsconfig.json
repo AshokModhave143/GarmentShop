@@ -17,7 +17,7 @@
     "resolveJsonModule": true,
     "outDir": "./build",
     "types": ["node", "jest"],
-    "typeRoots": ["./Typings"]
+    "typeRoots": ["node_modules/@types", "./Typings"]
   },
   "exclude": ["node_modules", "custom"],
   "include": [
