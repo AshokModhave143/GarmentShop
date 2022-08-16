@@ -174,5 +174,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "resolutions": {
+    "@storybook/addon-ondevice-notes/react-native-simple-markdown": "github:CharlesMangwa/react-native-simple-markdown#pull/112/head"
   }
 }
