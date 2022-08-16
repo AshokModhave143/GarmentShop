@@ -1,6 +1,6 @@
 import config from 'react-native-config'
 const customConfig = {
   useStorybook: false,
-  useStorybookToggle: true,
+  useStorybookToggle: false,
 }
 export const EnvConfig = { ...config, ...customConfig }
